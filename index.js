@@ -19,7 +19,7 @@ console.log("proofKit", proofKit);
 //  Alice generate challenge based on threshold marks set by Employer
 let thresholdMarks = 2.5;
 let normaliseThresholdMarks = thresholdMarks * 10;
-let challengeCount = 1 + normaliseAliceGPA - normaliseThresholdMarks;
+let challengeCount = Math.abs(1 + normaliseAliceGPA - normaliseThresholdMarks);
 let challenge = hashchain(secretKey, challengeCount, counter);
 console.log("challenge", challenge);
 
